@@ -1,4 +1,4 @@
-import MainRoutes from "./Routes/mainroutes"
+import MainRoutes from "./routes/mainroutes"
 import { useNavigate } from "react-router-dom";
 
 const App = ()=>{
