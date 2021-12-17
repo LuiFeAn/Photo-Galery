@@ -1,23 +1,24 @@
 import * as S from './style'
-import { Link } from 'react-router-dom'
-import {useState} from 'react'
+import {useParams,useNavigate} from 'react-router-dom';
 
 type Props = {
     title: string,
-    id?: number,
+    id: number,
 }
 
 const AlbumTitle = ({title,id}:Props)=>{
 
-    const handleList = ()=>{
-       
+    const navigate = useNavigate();
+
+    const handleList = async ()=>{
+       navigate(`album/${id}`);
     }
 
     return(
         <S.TitleContainer>
           <S.TitleOrder>
               <S.TitleList onClick={handleList}>
-                  {title}
+                  Album: {id} - {title.toUpperCase()}
               </S.TitleList>
           </S.TitleOrder>
         </S.TitleContainer>

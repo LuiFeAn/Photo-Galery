@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const TitleContainer = styled.div`
     padding:10px;
-    color:black;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 `;
 export const TitleOrder =styled.ul`
 
